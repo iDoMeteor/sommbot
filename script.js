@@ -32,8 +32,7 @@ Is that OK? %[Yes](postback:yes) %[No](postback:no)`))
     finish: {
         receive: (bot, message) => {
             return bot.getProp('name')
-                .then((name) => bot.say(`Sorry ${name}, wine didn't ` +
-                        'teach me how to do this!'))
+                .then((name) => bot.say(`Sorry ${name}, I\'m still learning about wine, please check back again soon!'))
                 .then(() => 'finish');
         }
     }
