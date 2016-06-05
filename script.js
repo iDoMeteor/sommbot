@@ -13,12 +13,12 @@ module.exports = new Script({
 
     start: {
         receive: (bot) => {
-            return bot.say('Hi! I\'m SommBot, your personal digital sommelier! Say HELLO to get started.')
+            return bot.say('Hi! I\'m SommBot, your personal digital sommelier!')
                 .then(() => 'askName');
         }
     },
 
-    speak: {
+    /*speak: {
         receive: (bot, message) => {
 
             let upperText = message.text.trim().toUpperCase();
@@ -66,7 +66,7 @@ module.exports = new Script({
                 .then(getSilent)
                 .then(processMessage);
         }
-    }
+    }*/
 
     askName: {
         prompt: (bot) => bot.say('What\'s your name?'),
